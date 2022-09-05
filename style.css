@@ -1,0 +1,217 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body{
+    background:linear-gradient( to top, rgba(0, 0, 0, 0.801),rgba(0, 128, 0, 0.418) , rgba(0, 0, 0, 0.801));
+    height: 100vh;
+}
+
+.numeros{
+    position: absolute;
+    opacity: .3;
+    font-size: 70pt;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: 2px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(1, 189, 1);
+    box-shadow: 0 0 200px rgba(1, 189, 1, 0.911);
+    animation: aumenta 10s infinite  linear ;
+    
+}
+@keyframes aumenta {
+    0%{
+        transform: scale(0) rotate(0deg) ;
+    }
+    50%{
+        transform: scale(1.2)  rotate(360deg);
+    }
+    100%{
+        transform: scale(0) rotate(0deg);
+    }
+}
+
+
+.s1{
+    top: 60px;
+    left: 20px;
+}
+.s2{
+    bottom: 40px;
+    right: 40px;
+}
+.s3{
+    top: 30px;
+    left: 500px;
+}
+.s4{
+    top: 400px;
+    left: 120px;
+}
+.s5{
+    top: 40px;
+    right: 50px;
+}
+.s6{
+    top: 50%;
+    left: 50%;
+}
+.s7{
+    bottom: 300px;
+    right: 300px;
+}
+.s8{
+    bottom: 20%;
+    left: 30%;
+}
+.s9{
+    left: 10%;
+    top: 30%;
+}
+
+/*Formatação da estrutura*/
+
+main{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 50%;
+    height: 100vh;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.726);
+    padding: 10px;
+}
+
+header{
+    width: 100%;
+    height: 5em;
+    border-bottom: 5px solid green;
+    box-shadow: 0 0 10px green;
+    color: white;
+    padding: 20px;
+}
+h1{
+    font-size: 16pt;
+    text-transform: uppercase;
+}
+
+.menu {
+    position: absolute;
+    top: 15%;
+    right: 10px;
+    width: 200px;
+    height: 15em;
+    box-shadow: 0 0 10px green;
+    background-color: rgba(255, 255, 255, 0.418);
+    display: none;
+}
+
+.menu ul{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+.menu li{
+    text-transform: uppercase;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid transparent;
+    transition: all  .6s;
+}
+.menu li:hover{
+    border-bottom-color:  green;
+}
+header > label {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+header > label > div{
+    width: 30px;
+    height: 3px;
+    background: white;
+}
+input[type=checkbox]{
+     display: none;
+}
+input[type=checkbox]:checked ~ .menu{
+    display: block;
+    animation: vem-menu 1s forwards ;
+}
+@keyframes vem-menu {
+    0%{ transform: scale(0);}
+    100%{ transform: scale(1);}
+}
+
+/*Secion esterização */
+
+section{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    color: white;
+    border-right: 1px solid green;
+}
+section article{
+    width: 100%;
+    height: 15em;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+section article:not(:last-child){
+    border-bottom: 2px solid green;
+}
+section input[type = radio] {
+    display: none;
+}
+
+article .unidades {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+}
+article .unidades label{
+    padding: 5px;
+    border-radius: 3px;
+    box-shadow: 0px 2px 2px ;
+}
+
+article input{
+    width: 15em;
+    border: none;
+    border-bottom: 2px solid green;
+    padding: 4px;
+    background-color: rgba(255, 255, 255, 0.363);
+    color: white;
+}
+input::placeholder{
+    color: white;
+}
+
+.saida-resultado{
+    padding: 4px 20px;
+    background-color: rgba(255, 255, 255, 0.315);
+    border-bottom: 2px solid green;
+}

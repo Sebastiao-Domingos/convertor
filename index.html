@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertedor de Números</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="numeros s1">0</div>
+    <div class="numeros s2">1</div>
+    <div class="numeros s3">2</div>
+    <div class="numeros s4">3</div>
+    <div class="numeros s5">4</div>
+    <div class="numeros s6">8</div>
+    <div class="numeros s7">5</div>
+    <div class="numeros s8">6</div>
+    <div class="numeros s9">7</div>
+    <main>
+        <header>
+            <h1> Conversor de Números</h1>
+
+            <label for="menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+            <input type="checkbox" name="menu" id="menu">
+            <nav class="menu">
+                <ul>
+                    <li>Difinições</li>
+                    <li>Ajudas</li>
+                    <li>Contacta - nos</li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <article class="entrada">
+                <h2>Entrada de Dados</h2>
+                <div class="unidades">
+                    <label for="binario" onclick="selecionar( 1 , this)" class="label1">Binário</label> <input type="radio" name="unidade" class="radio1" id="binario" checked> 
+
+                    <label for="octal" onclick="selecionar( 1 , this)" class="label1">Octal</label> <input type="radio" name="unidade" class="radio1" id="octal">
+
+                    <label for="decimal" onclick="selecionar( 1 , this)" class="label1">Decimal</label> <input type="radio" name="unidade" class="radio1" id="decimal">
+
+                    <label for="hexadecimal" onclick="selecionar( 1 , this)" class="label1">Hexadecimal</label> <input type="radio" name="unidade" class="radio1" id="hexadecimal">
+
+                </div>
+
+                <div class="valor">
+                    <input type="text" name="" id="valor" placeholder="Digite o valor a converter" oninput="calcular(this)">
+                </div>
+            </article>
+            <article class="saida">
+                <h2>Saida de Dados</h2>
+                <div class="unidades">
+                    <label for="binario2" onclick="selecionar( 2 , this )" class="label2">Binário</label> <input type="radio" name="unidade2" class="raido2" id="binario2" checked> 
+
+                    <label for="octal2" onclick="selecionar( 2 , this )" class="label2">Octal</label> <input type="radio" name="unidade2" class="raido2" id="octal2">
+
+                    <label for="decimal2" onclick="selecionar( 2 , this )" class="label2">Decimal</label> <input type="radio" name="unidade2" class="raido2" id="decimal2">
+
+                    <label for="hexadecimal2" onclick="selecionar( 2 , this )" class="label2">Hexadecimal</label> <input type="radio" name="unidade2" class="raido2" id="hexadecimal2">
+
+                </div>
+
+                      <div class="saida-resultado">
+                            Aguarde o resultado
+                      </div>
+                
+
+            </article>
+            
+        </section>
+        <footer>
+
+        </footer>
+
+    </main>
+
+
+    <script src="codigo.js"></script>
+</body>
+</html>
